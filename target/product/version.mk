@@ -66,3 +66,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.aospa.version.major=$(shell V1=$(AOSPA_MAJOR_VERSION); echo $${V1^}) \
     ro.aospa.version.minor=$(AOSPA_MINOR_VERSION) \
     ro.aospa.build.variant=$(shell V2=$(AOSPA_BUILD_VARIANT); echo $${V2^})
+
+# DEV KEYS
+PRODUCT_DEFAULT_DEV_CERTIFICATE := keys/releasekey
