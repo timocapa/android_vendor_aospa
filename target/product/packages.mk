@@ -12,13 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Abstruct
-PRODUCT_PACKAGES += \
-    Abstruct
-
-# Camera
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
+# Lawnchair
+$(call inherit-product, vendor/lawnchair/lawnchair.mk)
 
 # curl
 PRODUCT_PACKAGES += \
@@ -35,14 +30,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
-# Paranoid Packages
+# ParanoidHub
 PRODUCT_PACKAGES += \
-    ParanoidPapers
-
-# Paranoid Packages (OTA)
-ifneq ($(filter RELEASE BETA,$(AOSPA_BUILDTYPE)),)
-PRODUCT_PACKAGES += ParanoidHub
-endif
+    ParanoidHub
 
 PRODUCT_PACKAGES += \
     init.aospa-hub.rc
